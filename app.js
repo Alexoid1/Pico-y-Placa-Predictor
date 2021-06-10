@@ -46,16 +46,17 @@ let diasFeriados=[
 function Predictor(){
     let fecha=document.getElementById('exampleInputDate').value;
     let placa=document.getElementById('exampleInputPassword1').value; 
-    let hora=document.getElementById('exampleInputTime').value;  
+    let hora=document.getElementById('exampleInputTime').value;
+    let message=document.getElementById('message');   
     let lafecha=new Date(fecha);
     let mes=meses[lafecha.getMonth()];
     let diaNum=lafecha.getDate() + 1
     let dia=semana[lafecha.getDay()];
     let ultimoDig=parseInt(placa[placa.length -1]);
-    let selectDay=fecha.slice(5)
+    let selectDay=fecha.slice(5);
     if(diasFeriados.includes(selectDay)){
         
-        console.log(`puedes circular es dia feriado`)
+        message.textContent=`Puedes circular es día feriado`;
         
     }else{
         
@@ -64,18 +65,18 @@ function Predictor(){
         if(ultimoDig%2===0 && (dia==="Lunes"||dia==="Miércoles"||dia==="Viernes")){
             
             if((hour>=7 && hour<=9) || (hour>=16 && hour<=19) ){
-                console.log(`No puedes circular, el ultimo digito de tu placa es ${ultimoDig} y es ${dia}`)
+                message.textContent=`No puedes circular, el ultimo digito de tu placa es ${ultimoDig} y es ${dia}`;
             }else{
-                console.log('puedes circular')
+                message.textContent='Puedes circular';
             }
         }else if(ultimoDig%2!==0 && (dia==="Martes"||dia==="Jueves"||dia==="Sábado")){
             if((hour>=7 && hour<=9) || (hour>=16 && hour<=19) ){
-                console.log(`No puedes circular, el ultimo digito de tu placa es ${ultimoDig} y es ${dia}`)
+                message.textContent=`No puedes circular, el ultimo digito de tu placa es ${ultimoDig} y es ${dia}`;
             }else{
-                console.log('puedes circular')
+                message.textContent='Puedes circular';
             }
         }else{
-            console.log('puedes circular')
+            message.textContent='Puedes circular';
         }
     }
     
