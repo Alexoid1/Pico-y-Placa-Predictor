@@ -1,19 +1,19 @@
 body {
-    background: url(./img/pico.jpg);
-    background-size: cover;  
+  background: url(./img/pico.jpg);
+  background-size: cover;
 }
 
 form {
-    background: rgba(204, 203, 203, 0.9);
+  background: rgba(204, 203, 203, 0.9);
 }
 
 .mesage {
-    font-size: 25px;
-    color: rgb(192, 31, 31);
+  font-size: 25px;
+  color: rgb(192, 31, 31);
 }
 
 .formBord {
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 20px;
 }
