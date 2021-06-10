@@ -1,13 +1,14 @@
 const buton=document.getElementById('butn');
 
 let semana = [
-    "Domingo",
+    
     "Lunes",
     "Martes",
-    "Miercoles",
+    "Miércoles",
     "Jueves",
     "Viernes",
-    "Sabado"
+    "Sábado",
+    "Domingo",
 ];
  
 let meses = [
@@ -25,7 +26,22 @@ let meses = [
     "Diciembre"
 ];
 
-let diasFeriados=['01-01', '02-24', '02-25', '04-10', '05-01', '05-24', '07-25', '08-10', '10-09', '11-02', '11-03', '12-24', '12-25', '12-31']
+let diasFeriados=[
+    '01-01', 
+    '02-24', 
+    '02-25', 
+    '04-10', 
+    '05-01', 
+    '05-24', 
+    '07-25', 
+    '08-10', 
+    '10-09', 
+    '11-02', 
+    '11-03', 
+    '12-24', 
+    '12-25', 
+    '12-31'
+]
     
 function Predictor(){
     let fecha=document.getElementById('exampleInputDate').value;
@@ -35,19 +51,35 @@ function Predictor(){
     let mes=meses[lafecha.getMonth()];
     let diaNum=lafecha.getDate() + 1
     let dia=semana[lafecha.getDay()];
-    let ultimoDig=placa[placa.length -1];
+    let ultimoDig=parseInt(placa[placa.length -1]);
     let selectDay=fecha.slice(5)
     if(diasFeriados.includes(selectDay)){
         
-        console.log('puedes circular')
+        console.log(`puedes circular es dia feriado`)
+        
     }else{
-        console.log('hoy no puedes circular')
+        
+        let hour=parseInt(hora.slice(0,2));
+        console.log(ultimoDig,hour,dia)
+        if(ultimoDig%2===0 && (dia==="Lunes"||dia==="Miércoles"||dia==="Viernes")){
+            
+            if((hour>=7 && hour<=9) || (hour>=16 && hour<=19) ){
+                console.log(`No puedes circular, el ultimo digito de tu placa es ${ultimoDig} y es ${dia}`)
+            }else{
+                console.log('puedes circular')
+            }
+        }else if(ultimoDig%2!==0 && (dia==="Martes"||dia==="Jueves"||dia==="Sábado")){
+            if((hour>=7 && hour<=9) || (hour>=16 && hour<=19) ){
+                console.log(`No puedes circular, el ultimo digito de tu placa es ${ultimoDig} y es ${dia}`)
+            }else{
+                console.log('puedes circular')
+            }
+        }else{
+            console.log('puedes circular')
+        }
     }
-    // if(ultimoDig==='2'||ultimoDig==='6'||ultimoDig==='8'||ultimoDig==='0'&& dia==='Lunes'||dia==='Miercoles'||dia==='Viernes'){
-    //     console.log('hoy no puedes circular')
-    // }else{
-    //     console.log('puedes circular')
-    // }
+    
+    
 
 }
 
