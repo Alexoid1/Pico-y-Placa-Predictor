@@ -39,6 +39,20 @@ class Predictor {
     const dia = this.semana[lafecha.getDay()];
     const ultimoDig = parseInt(this.placa[this.placa.length - 1], 10);
     const selectDay = this.fecha.slice(5);
+    const regex=/^[a-zA-Z ]{2}/g
+    const regex2=/(\d{3})(?!.*\d)/g
+
+    if(!regex.test(this.placa)||!regex2.test(this.placa)){
+      return 'Escriba un numero de placa válido';
+    }
+
+    if(!this.fecha){
+      return 'Escoja una fecha';
+    }
+
+    if(!this.hora){
+      return 'Escoja una hora';
+    }
 
     if (this.diasFeriados.includes(selectDay)) {
     
