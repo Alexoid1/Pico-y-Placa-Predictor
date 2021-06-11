@@ -1,40 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1623380575305" clover="3.2.0">
-  <project timestamp="1623380575305" name="All files">
-    <metrics statements="31" coveredstatements="13" conditionals="26" coveredconditionals="1" methods="4" coveredmethods="2" elements="61" coveredelements="16" complexity="0" loc="31" ncloc="31" packages="1" files="1" classes="1"/>
+<coverage generated="1623388741129" clover="3.2.0">
+  <project timestamp="1623388741130" name="All files">
+    <metrics statements="33" coveredstatements="25" conditionals="28" coveredconditionals="25" methods="3" coveredmethods="2" elements="64" coveredelements="52" complexity="0" loc="33" ncloc="33" packages="1" files="1" classes="1"/>
     <file name="index.js" path="/home/alexis/Desktop/Microverse/Pico-y-Placa-Predictor/src/index.js">
-      <metrics statements="31" coveredstatements="13" conditionals="26" coveredconditionals="1" methods="4" coveredmethods="2"/>
+      <metrics statements="33" coveredstatements="25" conditionals="28" coveredconditionals="25" methods="3" coveredmethods="2"/>
       <line num="1" count="1" type="stmt"/>
-      <line num="6" count="1" type="stmt"/>
-      <line num="7" count="1" type="stmt"/>
-      <line num="8" count="1" type="stmt"/>
-      <line num="9" count="1" type="stmt"/>
-      <line num="19" count="1" type="stmt"/>
-      <line num="38" count="1" type="stmt"/>
-      <line num="39" count="1" type="stmt"/>
-      <line num="40" count="1" type="stmt"/>
-      <line num="41" count="1" type="stmt"/>
-      <line num="43" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="6" count="10" type="stmt"/>
+      <line num="7" count="10" type="stmt"/>
+      <line num="8" count="10" type="stmt"/>
+      <line num="9" count="10" type="stmt"/>
+      <line num="19" count="10" type="stmt"/>
+      <line num="38" count="10" type="stmt"/>
+      <line num="39" count="10" type="stmt"/>
+      <line num="40" count="10" type="stmt"/>
+      <line num="41" count="10" type="stmt"/>
+      <line num="43" count="10" type="cond" truecount="2" falsecount="0"/>
       <line num="45" count="1" type="stmt"/>
-      <line num="47" count="0" type="stmt"/>
-      <line num="49" count="0" type="cond" truecount="0" falsecount="6"/>
-      <line num="50" count="0" type="cond" truecount="0" falsecount="6"/>
-      <line num="51" count="0" type="stmt"/>
-      <line num="53" count="0" type="stmt"/>
-      <line num="55" count="0" type="cond" truecount="0" falsecount="6"/>
-      <line num="56" count="0" type="cond" truecount="0" falsecount="6"/>
-      <line num="57" count="0" type="stmt"/>
-      <line num="59" count="0" type="stmt"/>
-      <line num="62" count="0" type="stmt"/>
-      <line num="73" count="1" type="stmt"/>
+      <line num="47" count="9" type="stmt"/>
+      <line num="48" count="9" type="stmt"/>
+      <line num="49" count="9" type="stmt"/>
+      <line num="51" count="9" type="cond" truecount="6" falsecount="0"/>
+      <line num="52" count="3" type="cond" truecount="6" falsecount="0"/>
+      <line num="53" count="1" type="stmt"/>
+      <line num="55" count="2" type="stmt"/>
+      <line num="57" count="6" type="cond" truecount="4" falsecount="2"/>
+      <line num="58" count="5" type="cond" truecount="6" falsecount="0"/>
+      <line num="59" count="2" type="stmt"/>
+      <line num="61" count="3" type="stmt"/>
+      <line num="64" count="1" type="stmt"/>
+      <line num="71" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="72" count="0" type="stmt"/>
+      <line num="73" count="0" type="stmt"/>
       <line num="74" count="0" type="stmt"/>
       <line num="75" count="0" type="stmt"/>
       <line num="76" count="0" type="stmt"/>
       <line num="77" count="0" type="stmt"/>
       <line num="78" count="0" type="stmt"/>
       <line num="79" count="0" type="stmt"/>
-      <line num="80" count="0" type="stmt"/>
-      <line num="81" count="0" type="stmt"/>
     </file>
   </project>
 </coverage>

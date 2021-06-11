@@ -45,15 +45,17 @@ class Predictor {
       return 'Puedes circular es día feriado'
     } else {
       const hour = parseInt(this.hora.slice(0, 2), 10);
-
+      const minu = parseFloat(this.hora.slice(3)/100);
+      const sumHour=hour+minu
+      
       if (ultimoDig % 2 === 0 && (dia === 'Lunes' || dia === 'Miércoles' || dia === 'Viernes')) {
-        if ((hour >= 7 && hour <= 9) || (hour >= 16 && hour <= 19)) {
+        if ((sumHour >= 7 && sumHour <= 9.30) || (sumHour >= 16 && sumHour <= 19.30)) {
           return `No puedes circular, el ultimo digito de tu placa es ${ultimoDig} y es ${dia}`;
         } else {
           return 'Puedes circular';
         }
       } else if (ultimoDig % 2 !== 0 && (dia === 'Martes' || dia === 'Jueves' || dia === 'Sábado')) {
-        if ((hour >= 7 && hour <= 9) || (hour >= 16 && hour <= 19)) {
+        if ((sumHour >= 7 && sumHour <= 9.30) || (sumHour >= 16 && sumHour <= 19.30)) {
           return `No puedes circular, el ultimo digito de tu placa es ${ultimoDig} y es ${dia}`;
         } else {
           return 'Puedes circular';
@@ -64,22 +66,18 @@ class Predictor {
     }
 
   }
-
-
-
-  
 }
 
-window.load = function () {  
+if(buton){
   buton.addEventListener('click', (e) => {
-  e.preventDefault();
-  const f = document.getElementById('exampleInputDate').value;
-  const p = document.getElementById('exampleInputPassword1').value;
-  const h = document.getElementById('exampleInputTime').value;
-  const m = document.getElementById('message');
-  const predictor = new Predictor(f, p, h);
-  m.textContent= predictor.predict
- 
-});    
+    e.preventDefault();
+    const f = document.getElementById('exampleInputDate').value;
+    const p = document.getElementById('exampleInputPassword1').value;
+    const h = document.getElementById('exampleInputTime').value;
+    const m = document.getElementById('message');
+    const predictor = new Predictor(f, p, h);
+    m.textContent= predictor.predict()
+    
+  });    
 }
-export default Predictor;
+export default Predictor
