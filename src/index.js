@@ -49,7 +49,7 @@ class Predictor {
     if(!this.fecha){
       return 'Escoja una fecha';
     }
-
+    
     if(!this.hora){
       return 'Escoja una hora';
     }

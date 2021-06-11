@@ -24,6 +24,8 @@ const pred16 = new Predictor('2021-06-13', '', '17:20');
 const pred17 = new Predictor('2021-06-13', 'ASASDSD', '17:20');
 const pred18 = new Predictor('2021-06-13', '1231231', '17:20');
 const pred19 = new Predictor('2021-06-13', 're43', '17:20');
+const pred20 = new Predictor('', 'AAA-3233', '17:20');
+const pred21 = new Predictor('2021-06-13', 'AAA-3233', '');
 
 it('Caso que sea día feriado de navidad', () => {
     expect(pred0.predict()).toBe("Puedes circular es día feriado");
@@ -45,7 +47,7 @@ it('Caso día martes, ultimo numero de placa es 2', () => {
     expect(pred4.predict()).toBe("Puedes circular");
 });
 
-it('Caso día pico y placa hora 05:00 pm de la mañana', () => {
+it('Caso día pico y placa hora 05:00 am de la mañana', () => {
     expect(pred5.predict()).toBe("Puedes circular");
 });
 
@@ -103,4 +105,12 @@ it('Caso escriba solo numeros como numero de placa', () => {
 
 it('Caso escriba caracteres insuficientes para un numero de placa', () => {
     expect(pred19.predict()).toBe("Escriba un numero de placa válido");
+});
+
+it('Caso no escriba la fecha', () => {
+    expect(pred20.predict()).toBe("Escoja una fecha");
+});
+
+it('Caso no escriba la fecha', () => {
+    expect(pred21.predict()).toBe("Escoja una hora");
 });
